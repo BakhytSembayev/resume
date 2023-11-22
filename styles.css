@@ -17,16 +17,18 @@ body.dark-theme {
 }
 
 .info {
-    margin-left: 33%;
+    margin-left: 33%;    
 }
 .info2 {
-    margin-left: 15%;
+    margin-left: 15%;    
 }
 .content-container {
     display: flex;
     align-items: stretch;
     justify-content: space-around;
+    margin-top: -10px; /* Добавьте отрицательный верхний отступ, чтобы поднять блок выше */
 }
+
 
 .photo-container {
     display: flex; /* Используйте flex для центрирования */
@@ -111,3 +113,11 @@ fieldset > label > div > p {
     display: flex;
     justify-content: space-evenly;
 font-size: 2em;}
+.item_1{
+    color: azure;
+    background-color: rgb(6, 6, 6);
+    font-size: larger;
+     }
+     #brown {
+      background: rgb(10, 10, 10);
+     }
