@@ -117,11 +117,15 @@ fieldset > label > div > p {
 #brown {
     background: rgb(10, 10, 10);
 }
+/* Стили для .scrolling-text */
 .scrolling-text {
     white-space: nowrap;
     overflow: hidden;
     position: relative;
     animation: scrollText 30s linear infinite;
+    -webkit-animation: scrollText 20s linear infinite; /* Для Safari и старых версий Chrome */
+    -moz-animation: scrollText 20s linear infinite; /* Для старых версий Firefox */
+    -o-animation: scrollText 20s linear infinite; /* Для старых версий Opera */
 }
 
 @keyframes scrollText {
@@ -161,7 +165,7 @@ fieldset > label > div > p {
         align-items: center;
     }
     .scrolling-text {
-        animation: none; /* Отключение анимации на маленьких экранах */
+        
         overflow: visible;
     }
     
