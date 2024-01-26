@@ -8,7 +8,6 @@ body {
 body.light-theme {
     background-color: white;
     color: black;
-   
 }
 
 body.dark-theme {
@@ -26,34 +25,33 @@ body.dark-theme {
     display: flex;
     align-items: stretch;
     justify-content: space-around;
-    margin-top: -10px; /* Добавьте отрицательный верхний отступ, чтобы поднять блок выше */
+    margin-top: -10px;
 }
 
-
 .photo-container {
-    display: flex; /* Используйте flex для центрирования */
-    justify-content: center; /* Выравнивание по горизонтали */
-    align-items: center; /* Выравнивание по вертикали */
-    margin: 20px auto; /* Отступы для создания пространства вокруг контейнера */
-    height: 200px; /* Задайте высоту контейнера, если это необходимо */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    height: 200px;
     cursor: pointer;
 }
 
 #resume-photo {
     width: 200px;
-    height: 200px; /* Фиксированная высота для сохранения круглой формы */
+    height: 200px;
     border-radius: 50%;
     border: 3px solid #333;
-    /* Удалите свойство 'display' из этого селектора, если оно было добавлено */
 }
+
 #resume-photo.enlarged {
-    transform: scale(1.5); /* Увеличивает размер в 2 раза */
-    transition: transform 0.3s ease-in-out; /* Плавное увеличение */
-    z-index: 10; /* Убедитесь, что фотография находится поверх других элементов */
-    position: fixed; /* Фиксированное позиционирование для увеличения в пределах viewport */
-    top: 50%; /* Центрирование по вертикали */
-    left: 50%; /* Центрирование по горизонтали */
-    transform: translate(-50%, -50%) scale(2); /* Дополнительная корректировка для центрирования и увеличения */
+    transform: scale(1.5);
+    transition: transform 0.3s ease-in-out;
+    z-index: 10;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2);
 }
 
 fieldset {
@@ -112,12 +110,63 @@ fieldset > label > div > p {
 .ref {
     display: flex;
     justify-content: space-evenly;
-font-size: 2em;}
+    font-size: 2em;
+}
+
 .item_1{
     color: azure;
     background-color: rgb(6, 6, 6);
     font-size: larger;
-     }
-     #brown {
-      background: rgb(10, 10, 10);
-     }
+}
+
+#brown {
+    background: rgb(10, 10, 10);
+}
+.scrolling-text {
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    animation: scrollText 30s linear infinite;
+}
+
+@keyframes scrollText {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+@media only screen and (max-width: 768px) {
+    body {
+        position: static;
+    }
+    .info, .info2 {
+        margin-left: 5%;
+    }
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .photo-container {
+        width: 90%;
+        margin: 10px auto;
+    }
+    #resume-photo {
+        width: 100%;
+        height: auto;
+    }
+    fieldset {
+        width: 100%;
+    }
+    #sphere-wrap {
+        margin-top: 0;
+        width: 100%;
+        height: auto;
+    }
+    .ref {
+        flex-direction: column;
+        align-items: center;
+    }
+    .scrolling-text {
+        animation: none; /* Отключение анимации на маленьких экранах */
+        overflow: visible;
+    }
+    
+}
