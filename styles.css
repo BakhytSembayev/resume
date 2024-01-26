@@ -44,14 +44,9 @@ body.dark-theme {
     border: 3px solid #333;
 }
 
+/* Измененный класс для увеличения фото */
 #resume-photo.enlarged {
-    transform: scale(1.5);
-    transition: transform 0.3s ease-in-out;
-    z-index: 10;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(2);
+    transform: scale(1.1); /* Увеличение на 10% */
 }
 
 fieldset {
@@ -149,8 +144,9 @@ fieldset > label > div > p {
         margin: 10px auto;
     }
     #resume-photo {
-        width: 100%;
-        height: auto;
+        width: 60%; /* Уменьшение размера фото на 30% */
+        height: auto; /* Поддержание соотношения сторон */
+        transition: transform 0.3s ease-in-out; /* Плавный переход */
     }
     fieldset {
         width: 100%;
